@@ -10,7 +10,6 @@ function Player() {
     fetchplayers();
   }, []);
 
-  console.log('Nitin')
   const navigate  = useNavigate();
   const deleteUser = async (playerId) => {
     try {
@@ -42,15 +41,14 @@ function Player() {
                         <h2>No Player found at the moment</h2>
                     </div>
                 )}
-                <div className="container">
-                    <div className="row">
-                    <div><Link to="/CreatePlayer">Create Player</Link></div>
-                        <table className="table table-bordered">
+                <div>
+                    <div>
+                        <table>
                             <thead className="thead-light">
                                 <tr>
-                                    <th scope="col">Firstname</th>
-                                    <th scope="col">Middle Initials</th>
-                                    <th scope="col">Lastname</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">MI</th>
+                                    <th scope="col">Last Name</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Rating</th>
                                     <th scope="col">Actions</th>
@@ -65,10 +63,10 @@ function Player() {
                                         <td>{item.email}</td>
                                         <td>{item.rating}</td>
                                         <td>
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="btn-group" style={{ marginBottom: "20px" }}>
+                                            <div className="table-cont">
+                                                <div className="btn-group" style={{paddingLeft: "10%", marginBottom: "1px" }}>
                                                     <Link to={`/edit/${item.id}`} className="btn btn-sm btn-outline-secondary">Edit Player </Link>
-                                                    <button className="btn btn-sm btn-outline-secondary" onClick={() => deleteUser(item.id)}>Delete Player</button>
+                                                    <button  onClick={() => deleteUser(item.id)}>Delete Player</button>
                                                 </div>
                                             </div>
                                         </td>

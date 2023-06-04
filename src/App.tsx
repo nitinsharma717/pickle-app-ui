@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter,  Route, Routes } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Sidebar from './components/Sidebar'
+
+import Home from './pages/Home';
+import Team from './pages/Team';
+import Tasks from './pages/Tasks';
+import Chats from './pages/Chats';
+import Analytics from './pages/Analytics';
 import Player from './Player';
+import Logo from './Logo';
 import CreatePlayer from './CreatePlayer';
 import UpdatePlayer from './UpdatePlayer';
 
-function App() {
+const App: React.FunctionComponent = () => {
   return (
-    <div className="App">
-    <BrowserRouter>
-      <Routes>
-        <Route>
-          <Route path="Player" element={<Player />} />
-          <Route path="/" element={<Player />} />
-          <Route path="CreatePlayer" element={<CreatePlayer />} />
+    <>
+      <Router>
+        <Sidebar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/players' element={<Team />} />            
+          <Route path='/tasks' element={<Tasks />} />    
+          <Route path='/chats' element={<Chats />} />
+          <Route path='/analytics' element={<Analytics />} />
+          <Route path='/createplayer' element={<CreatePlayer />} />     
           <Route  path="/edit/:playerId" element={<UpdatePlayer/>} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </div>
-  );
+        </Routes>
+      </Router> 
+    </>
+  )
 }
 
-export default App;
+export default App

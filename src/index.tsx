@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import Player from './Player';
+import { GlobalStyle }  from './styles/global';
 
 
 const root = ReactDOM.createRoot(
@@ -12,6 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <GlobalStyle />
     <App/>
   </React.StrictMode>
 );
