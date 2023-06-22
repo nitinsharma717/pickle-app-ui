@@ -77,7 +77,7 @@ const CreatePlayer = () => {
         Create Player
       </Typography>
       <form onSubmit={handleSubmit}>
-            <TextField
+      <TextField
         label="First Name"
         fullWidth
         value={player.firstName}

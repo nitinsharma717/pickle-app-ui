@@ -14,8 +14,8 @@ export const SidebarData = [
     },
     {
         title: 'Create Player',
-        path: '/createplayer',
-        icon: <FaIcons.FaTasks />
+        path: '/create-player',
+        icon: <FaIcons.FaUserPlus />
     },
     {
         title: 'Create Matches',
@@ -24,7 +24,7 @@ export const SidebarData = [
     },
     {
         title: 'Create Tournament',
-        path: '/analytics',
+        path: '/tournament',
         icon: <FaIcons.FaRegChartBar />
     }
 ]

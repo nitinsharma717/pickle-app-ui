@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import CreatePlayer from '../components/CreatePlayer'
-import SearchBar from '../components/SearchBar'
+import PlayerSearch from '../components/PlayerSearch'
 
 const Chats: React.FunctionComponent = () => {
     return (
-            <SearchBar />
+            <PlayerSearch />
     )
 }
 
